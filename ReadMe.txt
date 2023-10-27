@@ -18,12 +18,14 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- L1PCA_CD_SNCA.m                : Implementation of CD-SNCA for the L1 Norm Generalized Eigenvalue Problem
      |              |-------- L1PCA_ComputeTrueObj.m         : The objective function used in the L1 Norm Generalized Eigenvalue Problem
      |              |
+     |              |
      |              |-------- OneNet_MSCR.m                  : Implementation of Multi-Stage Convex Relaxation for the One-Hidden-Layer Networks Problem
      |              |-------- OneNet_PDCA.m                  : Implementation of Proximal DC Algorithm for the One-Hidden-Layer Networks Problem
      |              |-------- OneNet_SubGrad.m               : Implementation of SubGradient Method for the One-Hidden-Layer Networks Problem
      |              |-------- OneNet_CD_SCA.m                : Implementation of CD-SCA for the One-Hidden-Layer Networks Problem
      |              |-------- OneNet_CD_SNCA.m               : Implementation of CD-SNCA for the One-Hidden-Layer Networks Problem
      |              |-------- OneNet_ComputeTrueObj.m        : The objective function used in the One-Hidden-Layer Networks Problem
+     |              |
      |              |
      |              |-------- SparseOpt_MSCR.m               : Implementation of Multi-Stage Convex Relaxation for the DC Penalized Sparsity Constrained Optimization Problem
      |              |-------- SparseOpt_PDCA.m               : Implementation of Proximal DC Algorithm for the DC Penalized Sparsity Constrained Optimization Problem
@@ -32,12 +34,14 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- SparseOpt_CD_SNCA.m            : Implementation of CD-SNCA for the DC Penalized Sparsity Constrained Optimization Problem
      |              |-------- SparseOpt_ComputeTrueObj.m     : The objective function used in the DC Penalized Sparsity Constrained Optimization Problem
      |              |
+     |              |
      |              |-------- L4EIG_MSCR.m                   : Implementation of Multi-Stage Convex Relaxation for the L4 Norm Regularized Eigenvalue Problem
      |              |-------- L4EIG_PDCA.m                   : Implementation of Proximal DC Algorithm for the L4 Norm Regularized Eigenvalue Problem
      |              |-------- L4EIG_GProj.m                  : Implementation of Gradient Projection Method for the L4 Norm Regularized Eigenvalue Problem
      |              |-------- L4EIG_SCA.m                    : Implementation of CD-SCA for the L4 Norm Regularized Eigenvalue Problem
      |              |-------- L4EIG_SNCA.m                   : Implementation of CD-SNCA for the L4 Norm Regularized Eigenvalue Problem
      |              |-------- L4EIG_ComputeTrueObj.m         : The objective function used in the L4 Norm Regularized Eigenvalue Problem
+     |              |
      |              |
      |              |-------- BinaryOpt_MSCR.m               : Implementation of Multi-Stage Convex Relaxation for the DC Penalized Binary Optimization Problem
      |              |-------- BinaryOpt_PDCA.m               : Implementation of Proximal DC Algorithm for the DC Penalized Binary Optimization Problem
@@ -46,13 +50,14 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- BinaryOpt_CD_SNCA.m            : Implementation of CD-SNCA for the DC Penalized Binary Optimization Problem
      |              |-------- BinaryOpt_ComputeTrueObj.m     : The objective function used in the DC Penalized Binary Optimization Problem
      |              |
+     |              |
      |              |-------- PhaseRetrivalAltMin.m          : Implementation of Alternating Minimization Method for the Phase Retrieval Problem
      |              |-------- PhaseRetrivalGradProj.m        : Implementation of Gradient Projection Method for the Phase Retrieval Problem
      |              |-------- PhaseRetrivalGPM.m             : Implementation of Generalized Power Method for the Phase Retrieval Problem
      |              |-------- PhaseRetrivalCD_SCA.m          : Implementation of CD-SCA for the Phase Retrieval Problem
      |              |-------- PhaseRetrivalCD_SNCA.m         : Implementation of CD-SNCA for the Phase Retrieval Problem
      |              |-------- PhaseRetrival_ComputeTrueObj.m : The objective function used in the Phase Retrieval Problem
-     |              |
+     |
      |
      |
 ------------------- util
@@ -66,6 +71,7 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- GetAvgCell.m                   : Compute the average vector for multiple variable-length vectors. Note: we truncate the vectors to make them the same length.
      |
      |
+     |
 ------------------- proximal
      |              |
      |              |-------- ncvx_prox_l1.m                 : Nonconvex proximal operator for the l1 norm function
@@ -75,6 +81,7 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- ncvx_prox_poly4.m              : Nonconvex proximal operator for the 4th-order polynomial function
      |              |-------- ncvx_prox_linfl2.m             : Nonconvex proximal operator for the linf-l2 function
      |              |-------- ncvx_prox_quad.m               : Nonconvex proximal operator for the quadratic function
+     |
      |
      |
 ------------------- data
@@ -88,13 +95,14 @@ We demonstrate the directory tree of our code, including the names of some main 
      |              |-------- *.mat                          : five matlab datasets
      |
      |
+     |
 ------------------- TableFigure
                     |
                     |-------- DrawFigurei_*.m                : Generate the figures for the i-th application
                     |-------- ShowLatexTablei.m              : Generate the latex source codes for the i-th application
 	 
 	 
-4. REFERENCES:
+3. REFERENCES:
 [1] CD Methods for DC Minimization. Submitted for publication.
 
 
