@@ -4,7 +4,7 @@
 
 function test_ncvx_prox_linfl2
 clc;clear all;close all;
-% 0.5 alpha t*t + beta*t  - lambda || t a + b||_inf
+% min_t 0.5*alpha*t^2 + beta t - lambda || x+tei ||, s.t. lb <= t <= ub
 
 for iter = 1:100000000
     n = 3;
