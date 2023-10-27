@@ -19,7 +19,9 @@ Gx = G*x;
 fobj_old = 1e100;
 for iter =1:10000000
     i = mod(iter,n)+1;
+    % Note: If you successfully compile the function ncvx_prox_relu_whileloop.cpp, please use ncvx_prox_relu_mexC.m instead of ncvx_prox_relu.m
     t_best = ncvx_prox_relu(theta,0,G(:,i),Gx,y_plus);
+    % t_best = ncvx_prox_relu_mexC(theta,0,G(:,i),Gx,y_plus);
     x(i) = x(i) + t_best;
     % reconstrct Gx in linear time
     Gx = Gx + t_best*G(:,i);
@@ -27,7 +29,7 @@ for iter =1:10000000
     cur_clock = clock;
     if(etime(cur_clock,last_rec_clock) > timeIntervel)
         fobj = 0.5*norm(max(Gx,0)-y_plus)^2;
-%                 fprintf('CD-SNCA iteration:%d, fobj:%.5f\n',iter,fobj);
+        %                 fprintf('CD-SNCA iteration:%d, fobj:%.5f\n',iter,fobj);
         ElasTime =  etime(cur_clock,initt);
         fobjs  = [fobjs;fobj];
         ts = [ts;ElasTime];
@@ -40,7 +42,7 @@ for iter =1:10000000
     if(~mod(iter,n))
         fobj_new = 0.5*norm(max(Gx,0)-y_plus)^2;
         rel_change = abs(fobj_old - fobj_new) / (1+abs(fobj_old));
-%           fprintf('CD-SNCA iter:%d, fobj:%f, change:%f\n',iter,fobj_new,rel_change);
+        %           fprintf('CD-SNCA iter:%d, fobj:%f, change:%f\n',iter,fobj_new,rel_change);
         if(rel_change < stopCriteria),break;end
         fobj_old = fobj_new;
     end
