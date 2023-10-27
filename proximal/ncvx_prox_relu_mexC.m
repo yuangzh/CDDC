@@ -49,21 +49,9 @@ i1=length(a1); i2=length(a2); z=[-1e20;sort(-b./a,'ascend');1e20];
 if(i2==0), r2=0; s2=0; else r2=sum(q2); s2=sum(p2);  end
 r1=0; s1=0; fobjs=[]; ts=[];
 
-%len_a = length(a);
-%best_t = ncvx_prox_relu_whileloop(alpha,beta,a,b,w,z,q1,q2,p1,p2,a1,a2,b1,b2,len_a,i1,i2,r1,r2,s1,s2);
+len_a = length(a);
+best_t = ncvx_prox_relu_whileloop(alpha,beta,a,b,w,z,q1,q2,p1,p2,a1,a2,b1,b2,len_a,i1,i2,r1,r2,s1,s2);
 
-hf=@(t)0.5*alpha*t^2+beta*t+0.5*norm(max(0,t*a+b))^2-w'*max(0,t*a+b);
-for i = 1:(length(a)+1)
-    tt=(z(i)+z(i+1))/2;
-    while ((i1>0)&&(tt*a1(i1)+b1(i1)>0))
-        r1=r1+q1(i1); s1=s1+p1(i1); i1=i1-1;  end
-    while ((i2>0)&&(tt*a2(i2)+b2(i2)<=0))
-        r2=r2-q2(i2); s2=s2-p2(i2); i2=i2-1;  end
-    tt=(s1+s2-beta)/(r1+r2+alpha);
-    if((tt>=z(i)-1e-16)&&(tt<=z(i+1)+1e-16))
-        fobjs=[fobjs;hf(tt)]; ts=[ts;tt];  end
-end
-[~,j] = min(fobjs);best_t = ts(j);
 
 
 
