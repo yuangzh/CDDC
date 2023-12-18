@@ -103,7 +103,8 @@ We demonstrate the directory tree of our code, including the names of some main 
 	 
 	 
 3. REFERENCES:
-[1] CD Methods for DC Minimization. Submitted for publication.
+[1] Ganzhao Yuan. Coordinate Descent Methods for DC Minimization: Optimality Conditions and Global Convergence. Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2023.
+[2] CD Methods for DC Minimization. Submitted for publication.
 
 
 	 
